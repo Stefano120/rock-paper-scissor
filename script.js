@@ -1,16 +1,19 @@
+const options = ["Rock", "Paper", "Scissor"]
+
 function getComputerChoice() {
-    return choices[Math.floor(Math.random() * choices.length)] 
+    const choices = options[Math.floor(Math.random() * options.length)]
+    return choices 
 }
 
-const choices = ["Rock", "Paper", "Scissor"]
+
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === "Rock" && computerSelection === "Paper") 
-        return "You Lose, Paper beats Rock"
     }
   
    
-  const playerSelection = "rock";
+  const playerSelection = "Rock";
   const computerSelection = getComputerChoice();
-  console.log(playRound("Rock", "Paper"));
-  console.log(getComputerChoice())
+  console.log(playRound(playerSelection,computerSelection));
+
+  
