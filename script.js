@@ -8,14 +8,14 @@ function getComputerChoice() {
 function checkWinner(playerSelection,computerSelection) {
     if (playerSelection == computerSelection){
     return "Tie";
-} else if (
-(playerSelection == "Rock" && computerSelection == "Scissor")||
-(playerSelection == "Scissor" && computerSelection == "Paper")||
-(playerSelection == "Paper" && computerSelection == "Rock")
+} 
+    else if (
+    (playerSelection == "Rock" && computerSelection == "Scissor")||
+    (playerSelection == "Scissor" && computerSelection == "Paper")||
+    (playerSelection == "Paper" && computerSelection == "Rock")
 ){
     return "Player"
-}
-else {
+} else {
     return "Computer"
 }
 }
@@ -29,12 +29,22 @@ function PlayRound(playerSelection, computerSelection){
     else if (result == "Player"){
         return `You Win! ${playerSelection} beats ${computerSelection}`
     }
-    else (result == "Computer"){
+    else{
         return `You Lose! ${computerSelection} beats ${playerSelection}`
     }
 
 }
 
+function game(){
+    console.log("Welcome!")
+    for (let i = 0; i < 5; i++){
+        const playerSelection = "Rock";
+        const computerSelection = getComputerChoice();
+        console.log(PlayRound(playerSelection,computerSelection));
+    }
+}
+
+game()
 
 
 
