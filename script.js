@@ -1,8 +1,8 @@
-const options = ["Rock", "Paper", "Scissor"]
+const options = ["rock", "paper", "scissor"]
 
 function getComputerChoice() {
-    const choices = options[Math.floor(Math.random() * options.length)]
-    return choices 
+    const choice = options[Math.floor(Math.random() * options.length)]
+    return choice 
 }
 
 function checkWinner(playerSelection,computerSelection) {
@@ -42,20 +42,18 @@ function getPlayerChoice(){
         if(choice == null){
             continue;
         }
-        const choiceinLower = choice.toLowerCase();
-        if(choices.includes(choiceInLower)){
+        const choiceInLower = choice.toLowerCase();
+        if(options.includes(choiceInLower)){
             validatedInput = true;
-            return choiceinLower;
+            return choiceInLower;
         }
-        
-    }
-     
+    } 
 }
 
 function game(){
     console.log("Welcome!")
     for (let i = 0; i < 5; i++){
-        const playerSelection = "Rock";
+        const playerSelection = getPlayerChoice();
         const computerSelection = getComputerChoice();
         console.log(PlayRound(playerSelection,computerSelection));
     }
